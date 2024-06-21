@@ -1,15 +1,19 @@
-import { useState } from "react";
-import "./App.css";
-
+import { Button } from "./components/ui/button";
+import { ThemeProvider } from "./components/ui/theme-provider";
+import { ModeToggle } from "./components/ui/mode-toggle";
 function App() {
   return (
-    <div>
-      <h1>Chatbox</h1>
-      <p>
-        Chatbox is a simple chat application built with React, ASP.NET, and
-        SignalR.
-      </p>
-    </div>
+    <ThemeProvider>
+      <div>
+        <h1 className="text-3xl">Chatbox</h1>
+        <p>
+          <ModeToggle />
+          Chatbox is a simple chat application built with React, ASP.NET, and
+          SignalR.
+          <Button>Click me</Button>
+        </p>
+      </div>
+    </ThemeProvider>
   );
 }
 
